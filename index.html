@@ -738,16 +738,16 @@
                 if (charIndex < lines[lineIndex].length) {
                     consoleInput.textContent += lines[lineIndex].charAt(charIndex);
                     charIndex++;
-                    setTimeout(typeLine, 50);
+                    setTimeout(typeLine, 5);
                 } else {
                     consoleOutput.innerHTML += `<div class="console-line">> ${lines[lineIndex]}</div>`;
                     consoleInput.textContent = '';
                     charIndex = 0;
                     lineIndex++;
-                    setTimeout(typeLine, 500);
+                    setTimeout(typeLine, 50);
                 }
             } else {
-                setTimeout(startSite, 500);
+                setTimeout(startSite, 50);
             }
         }
 
