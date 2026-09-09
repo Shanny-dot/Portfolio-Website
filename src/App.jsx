@@ -1,5 +1,6 @@
 import React from 'react';
-import HeaderNav from './components/HeaderNav';
+import BackgroundVideo from './components/BackgroundVideo';
+import MainframeNavbar from './components/MainframeNavbar';
 import HeroSection from './components/HeroSection';
 import WhatITestSection from './components/WhatITestSection';
 import BugHuntSection from './components/BugHuntSection';
@@ -10,19 +11,26 @@ import ContactSection from './components/ContactSection';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#070a11] text-slate-100 font-sans selection:bg-emerald-500 selection:text-slate-950">
-      {/* Fixed Header Bar */}
-      <HeaderNav />
+    <div className="relative min-h-screen bg-[#070a11] text-slate-100 font-body selection:bg-white selection:text-black">
+      {/* Mouse Scrubbing Background Video */}
+      <BackgroundVideo />
 
-      {/* Main Single Page Sections */}
+      {/* Fixed Mainframe Navbar */}
+      <MainframeNavbar />
+
+      {/* Main Content Area */}
       <main className="relative z-10">
         <HeroSection />
-        <WhatITestSection />
-        <BugHuntSection />
-        <ToolkitSection />
-        <ProjectCaseStudies />
-        <MetricsDashboard />
-        <ContactSection />
+
+        {/* Portfolio Content Sections with Dark Glass Backdrop */}
+        <div className="relative z-10 bg-[#070a11]/90 backdrop-blur-xl border-t border-white/10">
+          <WhatITestSection />
+          <BugHuntSection />
+          <ToolkitSection />
+          <ProjectCaseStudies />
+          <MetricsDashboard />
+          <ContactSection />
+        </div>
       </main>
     </div>
   );

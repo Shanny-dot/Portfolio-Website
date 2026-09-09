@@ -3,6 +3,8 @@
 
 @layer base {
   :root {
+    --font-heading: 'HelveticaNowDisplay-Medium', 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'HelveticaNowDisplayW01-Rg', 'Helvetica Neue', Arial, sans-serif;
     --bg-dark: #070a11;
     --panel-dark: #0d1322;
     --emerald-glow: #10b981;
@@ -13,7 +15,7 @@
   body {
     background-color: var(--bg-dark);
     color: #e2e8f0;
-    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-body);
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -22,6 +24,23 @@
   code, pre, .font-mono {
     font-family: 'JetBrains Mono', monospace;
   }
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
 }
 
 /* Custom Telemetry / Mission Control Styling */
