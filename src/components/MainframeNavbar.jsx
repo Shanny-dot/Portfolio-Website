@@ -4,11 +4,10 @@ export default function MainframeNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { name: 'What I Test', href: '#what-i-test' },
-    { name: 'Bug Hunt', href: '#bug-hunt' },
-    { name: 'Toolkit', href: '#toolkit' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Telemetry', href: '#telemetry' },
+    { name: 'Labs', href: '#what-i-test' },
+    { name: 'Studio', href: '#bug-hunt' },
+    { name: 'Openings', href: '#toolkit' },
+    { name: 'Shop', href: '#projects' },
   ];
 
   return (
@@ -20,10 +19,10 @@ export default function MainframeNavbar() {
             className="text-[21px] sm:text-[26px] tracking-tight text-white font-heading"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Shantanu.Fadnavis®
+            Mainframe®
           </span>
           <span
-            className="text-[25px] sm:text-[30px] text-emerald-400 select-none"
+            className="text-[25px] sm:text-[30px] text-white select-none"
             style={{ letterSpacing: '-0.02em' }}
           >
             ✳︎
@@ -31,7 +30,7 @@ export default function MainframeNavbar() {
         </a>
 
         {/* Desktop nav links (center, hidden below md) */}
-        <div className="hidden lg:flex flex-row items-center text-[21px] xl:text-[23px] text-white">
+        <div className="hidden md:flex flex-row items-center text-[23px] text-white">
           {links.map((link, idx) => (
             <React.Fragment key={link.name}>
               <a
@@ -45,18 +44,18 @@ export default function MainframeNavbar() {
           ))}
         </div>
 
-        {/* Desktop CTA (right, hidden below lg) */}
+        {/* Desktop CTA (right, hidden below md) */}
         <a
           href="#contact"
-          className="hidden lg:block text-[21px] xl:text-[23px] text-white underline underline-offset-2 hover:opacity-60 transition-opacity"
+          className="hidden md:block text-[23px] text-white underline underline-offset-2 hover:opacity-60 transition-opacity"
         >
           Get in touch
         </a>
 
-        {/* Mobile hamburger (visible below lg) */}
+        {/* Mobile hamburger (visible below md) */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden relative z-20 flex flex-col gap-[5px] p-2 focus:outline-none cursor-pointer"
+          className="md:hidden relative z-20 flex flex-col gap-[5px] p-2 focus:outline-none cursor-pointer"
           aria-label="Toggle menu"
         >
           <span
@@ -79,7 +78,7 @@ export default function MainframeNavbar() {
 
       {/* Mobile overlay (z-index: 9) */}
       <div
-        className={`fixed inset-0 bg-black/90 backdrop-blur-md z-[9] flex flex-col justify-center items-start px-8 gap-8 transition-all duration-300 lg:hidden ${
+        className={`fixed inset-0 bg-black/90 backdrop-blur-md z-[9] flex flex-col justify-center items-start px-8 gap-8 transition-all duration-300 md:hidden ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >

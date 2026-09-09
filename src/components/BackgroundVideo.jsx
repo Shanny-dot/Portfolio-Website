@@ -57,13 +57,12 @@ export default function BackgroundVideo() {
         playsInline
         preload="auto"
         onSeeked={handleSeeked}
-        className="w-full h-full object-cover filter brightness-[0.75] contrast-[1.1] hue-rotate-[190deg]"
+        className="w-full h-full object-cover"
         style={{ objectPosition: '70% center' }}
       />
-      {/* Dark theme overlay matching complete website's #070a11 color */}
-      <div className="absolute inset-0 bg-[#070a11]/60 backdrop-blur-[2px]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#070a11] via-transparent to-[#070a11]/80" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#070a11]/85 via-transparent to-[#070a11]/60" />
+      {/* Soft gradient transition at bottom & left edge */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#070a11] via-transparent to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/20" />
     </div>
   );
 }
