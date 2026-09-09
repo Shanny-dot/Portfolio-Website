@@ -49,15 +49,21 @@ export default function BackgroundVideo() {
   };
 
   return (
-    <video
-      ref={videoRef}
-      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260826_041744_63efcd78-bf7d-4039-99e2-2461e8a61903.mp4"
-      muted
-      playsInline
-      preload="auto"
-      onSeeked={handleSeeked}
-      className="fixed inset-0 z-0 w-full h-full object-cover pointer-events-none"
-      style={{ objectPosition: '70% center' }}
-    />
+    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+      <video
+        ref={videoRef}
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260826_041744_63efcd78-bf7d-4039-99e2-2461e8a61903.mp4"
+        muted
+        playsInline
+        preload="auto"
+        onSeeked={handleSeeked}
+        className="w-full h-full object-cover filter brightness-[0.75] contrast-[1.1] hue-rotate-[190deg]"
+        style={{ objectPosition: '70% center' }}
+      />
+      {/* Dark theme overlay matching complete website's #070a11 color */}
+      <div className="absolute inset-0 bg-[#070a11]/60 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#070a11] via-transparent to-[#070a11]/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#070a11]/85 via-transparent to-[#070a11]/60" />
+    </div>
   );
 }
