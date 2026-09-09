@@ -4,10 +4,10 @@ export default function MainframeNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { name: 'Labs', href: '#what-i-test' },
-    { name: 'Studio', href: '#bug-hunt' },
-    { name: 'Openings', href: '#toolkit' },
-    { name: 'Shop', href: '#projects' },
+    { name: 'What I Test', href: '#what-i-test' },
+    { name: 'Bug Hunt', href: '#bug-hunt' },
+    { name: 'Toolkit', href: '#toolkit' },
+    { name: 'Projects', href: '#projects' },
   ];
 
   return (
@@ -19,10 +19,10 @@ export default function MainframeNavbar() {
             className="text-[21px] sm:text-[26px] tracking-tight text-white font-heading"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Mainframe®
+            Shantanu®
           </span>
           <span
-            className="text-[25px] sm:text-[30px] text-white select-none"
+            className="text-[25px] sm:text-[30px] text-emerald-400 select-none"
             style={{ letterSpacing: '-0.02em' }}
           >
             ✳︎
@@ -30,7 +30,7 @@ export default function MainframeNavbar() {
         </a>
 
         {/* Desktop nav links (center, hidden below md) */}
-        <div className="hidden md:flex flex-row items-center text-[23px] text-white">
+        <div className="hidden md:flex flex-row items-center text-[21px] lg:text-[23px] text-white">
           {links.map((link, idx) => (
             <React.Fragment key={link.name}>
               <a
@@ -47,7 +47,7 @@ export default function MainframeNavbar() {
         {/* Desktop CTA (right, hidden below md) */}
         <a
           href="#contact"
-          className="hidden md:block text-[23px] text-white underline underline-offset-2 hover:opacity-60 transition-opacity"
+          className="hidden md:block text-[21px] lg:text-[23px] text-white underline underline-offset-2 hover:opacity-60 transition-opacity"
         >
           Get in touch
         </a>
